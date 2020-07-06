@@ -1,0 +1,15 @@
+{% block body_content %}
+<div class='form'>
+        <form method='POST' action=''>
+            {{ form.hidden_tag() }}
+                <div class='form_group'>
+                {{ form.submit }}
+		</div>
+        
+	</form>
+	<h1>DnD Character Generator</h1>
+	{% if race %}
+	<h1> Your character is a {{ race }} {{ classes }} </h1>
+	<h2> Your random character name is {{ name.text }} </h2>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+        service_one:
+                image: rajahamza104/service_one
+                build: ./service_one
+                ports:
+                        - '5000:5000'
+                depends_on:
+                        - service_two
+                environment:
+                        - SECRET_KEY=${SECRET_KEY}
+
+        service_two:
+                image: rajahamza104/service_two
+                build: ./service_two
+                ports:
+                        - '5001:5001'
+
+        service_three:
+                image: rajahamza104/service_three
+                build: ./service_three
+                ports:
+                        - '5002:5002'
+        service_four:
+                image: rajahamza104/service_four
+                build: ./service_four
+                ports:
+                        - '5003:5003'
