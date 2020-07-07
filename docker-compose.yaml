@@ -15,14 +15,28 @@ services:
                 build: ./service_two
                 ports:
                         - '5001:5001'
+                deploy:
+                        replicas: 4
 
         service_three:
                 image: rajahamza104/service_three
                 build: ./service_three
                 ports:
                         - '5002:5002'
+                deploy:
+                        replicas: 4
         service_four:
                 image: rajahamza104/service_four
                 build: ./service_four
                 ports:
                         - '5003:5003'
+                deploy:
+                        replicas: 4
+        nginx:
+                image: nginx:latest
+                ports:
+                        - '80:80'
+                volumes:
+                        - type: bind
+                          source: ./nginx/nginx.conf
+                          target: /etc/nginx/nginx.conf
