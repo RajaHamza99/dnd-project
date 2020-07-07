@@ -1,4 +1,8 @@
+<!doctype html>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 {% block body_content %}
+<h1>DnD Character Generator test</h1>
+<h2>Local Registry Test</h2>
 <div class='form'>
         <form method='POST' action=''>
             {{ form.hidden_tag() }}
@@ -7,9 +11,13 @@
 		</div>
         
 	</form>
-	<h1>DnD Character Generator</h1>
 	{% if race %}
 	<h1> Your character is a {{ race }} {{ classes }} </h1>
-	<h2> Your random character name is {{ name.text }} </h2>
+	<h2> Your character name is {{ name }}</h2>
+	<h2> Your character stats are {{ stats.key }} </h2>
+	{% for key, value in stats.items() %}
+	<th>{{ key }}</th>
+	<td>{{ value }} </td>
+	{% endfor %}
 	{% endif %}
 {% endblock %}

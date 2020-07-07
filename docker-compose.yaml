@@ -7,22 +7,38 @@ services:
                         - '5000:5000'
                 depends_on:
                         - service_two
+                        - service_three
+                        - service_four
                 environment:
                         - SECRET_KEY=${SECRET_KEY}
+                deploy:
+                        replicas: 6
 
         service_two:
                 image: rajahamza104/service_two
                 build: ./service_two
                 ports:
                         - '5001:5001'
+                deploy:
+                        replicas: 6
 
         service_three:
                 image: rajahamza104/service_three
                 build: ./service_three
                 ports:
                         - '5002:5002'
+                deploy:
+                        replicas: 6
         service_four:
                 image: rajahamza104/service_four
                 build: ./service_four
                 ports:
                         - '5003:5003'
+                deploy:
+                        replicas: 6
+
+        registry:
+                image: registry
+                build: registry
+                ports:
+                        - '5005:5000'
