@@ -4,6 +4,6 @@ curl https://get.docker.com | sudo bash
 echo "add user to docker group"
 sudo usermod -aG docker $(whoami)
 echo "install docker-compose"
-sudo curl -L 'https://github.com/docker/compose/releases/download/\${version}/docker-compose-\$(uname -s)-\$(uname -m)' -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 echo "making docker-compose executable"
 sudo chmod +x /usr/local/bin/docker-compose
