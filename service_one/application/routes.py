@@ -2,6 +2,7 @@ from flask import render_template, request, url_for, Response, jsonify, json
 from application import app, db
 from application.forms import GenerateForm
 from application.models import characters
+from sqlalchemy import desc
 import random, requests, time
 
 
@@ -26,7 +27,7 @@ def home():
                 char_race = character_race)
         db.session.add(data)
         db.session.commit()
+        
+        stored_characters = characters.query.order_by(desc(characters.id)).limit(5).all()
 
-
-        all_characters = characters.query.all()
-        return render_template('home.html', title='Class', form=form, classes=character_class, race=character_race, name=character_name, stats=stat_dict, all_characters=all_characters)
+        return render_template('home.html', title='Class', form=form, classes=character_class, race=character_race, name=character_name, stats=stat_dict, all_characters=stored_characters)

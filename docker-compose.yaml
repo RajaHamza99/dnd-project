@@ -11,6 +11,8 @@ services:
                         - service_four
                 environment:
                         - SECRET_KEY=${SECRET_KEY}
+                        - DB_USER=${DB_USER}
+                        - DB_PASS=${DB_PASS} 
                 deploy:
                         replicas: 6
 
@@ -39,11 +41,18 @@ services:
         mysql:
                 image: rajahamza104/dnd-sql
                 build: ./db
+                volumes:
+                        - type: volume
+                          source: dnd_sql
+                          target: /var/lib/mysql
+
                 environment:
-                        MYSQL_USER: ${DB_USERNAME}
-                        MYSQL_PASSWORD: ${DB_PASSWORD}
-                        MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+                        MYSQL_USER: ${DB_USER}
+                        MYSQL_PASSWORD: ${DB_PASS}
+                        MYSQL_RANDOM_ROOT_PASSWORD: 'TRUE'
                         MYSQL_DATABASE: dnd-db
                 ports:
                         - '3306:3306'
-                          
+
+volumes:
+        dnd_sql:

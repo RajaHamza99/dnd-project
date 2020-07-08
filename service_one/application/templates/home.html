@@ -16,7 +16,13 @@
 	{% for key, value in stats.items() %}
 	<th>{{ key }}</th>
 	<td>{{ value }} </td>
+	<br>
 	{% endfor %}
-	<h3> Your randomly generated characters are {{ all_characters }}</h3>
+	{% for character in all_characters %}
+	<h3>{{ character.id }}</h3>
+	<h3> Your character name is {{ character.name}}</h3>
+	<h3> Your character class is {{character.char_class}}</h3>
+	<h3> Your character race is {{character.char_race}} </h3>
+	{% endfor %}
 	{% endif %}
-{% endblock %}
+	{% endblock %}
