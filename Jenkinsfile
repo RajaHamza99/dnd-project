@@ -3,8 +3,8 @@ pipeline{
         stages{
             stage('Pull Repo'){
                 steps{
-                    sh "git pull"
                     sh "git checkout development2"
+                    sh "git pull"
                 }
             }
             stage('Install docker and docker-compose'){
