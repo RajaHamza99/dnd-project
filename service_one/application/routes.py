@@ -1,6 +1,7 @@
 from flask import render_template, request, url_for, Response, jsonify, json
-from application import app
+from application import app, db
 from application.forms import GenerateForm
+from application.models import characters
 import random, requests, time
 
 
@@ -19,4 +20,13 @@ def home():
         character_name = name.text
         stat = requests.post('http://service_four:5003/stats', data=character_race)
         stat_dict = json.loads(stat.text)
-        return render_template('home.html', title='Class', form=form, classes=character_class, race=character_race, name=character_name, stats=stat_dict)
+        data = characters(
+                name = character_name,
+                char_class = character_class,
+                char_race = character_race)
+        db.session.add(data)
+        db.session.commit()
+
+
+        all_characters = characters.query.all()
+        return render_template('home.html', title='Class', form=form, classes=character_class, race=character_race, name=character_name, stats=stat_dict, all_characters=all_characters)
