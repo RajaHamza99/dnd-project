@@ -4,9 +4,9 @@ import random, requests
 
 @app.route('/name', methods = ['GET', 'POST'])
 def generatename():
-    
+    choose_name = "this page will generate a name for you"
     race = request.data.decode('utf-8')
-
+    
     elf_names = ["Wrandithas", "Baljeon", "Ianris", "Zumpetor", "Olowraek", "Advalur", "Trazeiros", "Virkian", "Qidan", "Luwraek", "Adleth", "Krisrora", "Bithyra", "Gilharice", "Grecyne", "Inatris", "Keyrel", "Caicaryn", "Greroris", "Qixisys"]
     tiefling_names = ["Rezire", "Garadius", "Valemon", "Zherakas", "Iamir", "Guerakas", "Kilron", "Harmony", "Innovation", "Hymn", "Rolyvia", "Oriborys", "Mismaia", "Seiripunith", "Velyola", "Sarqine", "Valza", "Uncommon", "Trickery", "Voyage"]
     human_names = ["Fahnin Zehro", "Melam Nulud", "Brukvork Deadshard", "Barstulm Mooncreek", "Fabral Glug", "Bral Stivredz", "Tulvom Orbpike", "Um Twobough", "Mihpion-Zad Nanskankhifk", "Beurhuef Biprueb", "Gandoutvoc Gevarginti", "Drerdoc Hemuri", "Jia Jain", "Iam Niaoy", "Ritemer Godreza", "Cranin Ozogal", "Judimah Zommid", "Namih Pahla", "Teelzenell Keentrap", "Jole Forestfang", "Choto Mag", "Kih Mamog", "Lovami Seawood", "Kafre Noseorb", "Rethani Jekrevehd", "Totho Meldrikt", "Sudhandra Nakanovza", "Hihi Emura", "Jai Waim", "Shai Nua", "Irb Ralurgal", "Mitf Pisonzas"]
