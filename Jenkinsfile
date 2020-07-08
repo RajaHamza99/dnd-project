@@ -3,7 +3,7 @@ pipeline{
         stages{
             stage('Pull Repo'){
                 steps{
-                    sh "git clone https://github.com/RajaHamza99/dnd-project.git"
+                    sh "git pull"
                     sh "git checkout development2"
                 }
             }
