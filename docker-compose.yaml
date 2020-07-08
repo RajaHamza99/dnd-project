@@ -1,7 +1,7 @@
 version: '3.7'
 services:
         service_one:
-                image: rajahamza104/service_one
+                image: rajahamza104/my_service_one
                 build: ./service_one
                 ports:
                         - '5000:5000'
@@ -15,7 +15,7 @@ services:
                         replicas: 6
 
         service_two:
-                image: rajahamza104/service_two
+                image: rajahamza104/my_service_two
                 build: ./service_two
                 ports:
                         - '5001:5001'
@@ -23,22 +23,17 @@ services:
                         replicas: 6
 
         service_three:
-                image: rajahamza104/service_three
+                image: rajahamza104/my_service_three
                 build: ./service_three
                 ports:
                         - '5002:5002'
                 deploy:
                         replicas: 6
         service_four:
-                image: rajahamza104/service_four
+                image: rajahamza104/my_service_four
                 build: ./service_four
                 ports:
                         - '5003:5003'
                 deploy:
                         replicas: 6
 
-        registry:
-                image: registry
-                build: registry
-                ports:
-                        - '5005:5000'
