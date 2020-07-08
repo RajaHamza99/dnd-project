@@ -1,12 +1,6 @@
 pipeline{
         agent any
         stages{
-            stage('Pull Repo'){
-                steps{
-                    sh "git checkout development2"
-                    sh "git pull"
-                }
-            }
             stage('Install docker and docker-compose'){
                 steps{
                     sh "sudo apt update"
@@ -19,7 +13,6 @@ pipeline{
             }
                 stage('Deploy application'){
                         steps{
-                                sh "cd dnd-project"
                                 sh "docker-compose build"
                                 sh "docker-compose push"
                                 sh "docker stack deploy --compose-file docker-compose.yaml dnd"
