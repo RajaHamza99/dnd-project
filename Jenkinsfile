@@ -1,6 +1,9 @@
 pipeline{
         agent any
         stages{
+            stage('Checkout branch')
+                steps{
+                        sh "git checkout development2"
             stage('Install docker and docker-compose'){
                 steps{
                     sh "sudo apt update"
