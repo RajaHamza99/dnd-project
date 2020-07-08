@@ -6,7 +6,7 @@ sudo groupadd docker
 echo "add user to docker group"
 sudo usermod -aG docker $(whoami)
 echo "log out and back in"
-su -s ${USER}
+newgrp docker
 echo "check docker works"
 docker run hello-world
 echo "install docker-compose"
