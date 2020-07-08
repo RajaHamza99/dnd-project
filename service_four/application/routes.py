@@ -1,5 +1,6 @@
 from flask import redirect, url_for, request, Response, jsonify
 from application import app
+from application.models import characters 
 import random, requests
 
 @app.route('/name', methods = ['GET', 'POST'])
@@ -22,26 +23,92 @@ def generatename():
 
     if race == 'Elf':
         choose_name = random.choice(elf_names)
+        addChar = characters(
+                name = choose_name,
+                char_race = race
+                )
+        db.session.add(addChar)
+        db.session.commit()
     elif race == 'Tiefling':
         choose_name = random.choice(tiefling_names)
+        addChar = characters(
+                name = choose_name,
+                char_race = race
+                )
+        db.session.add(addChar)
+        db.session.commit()
     elif race == 'Human':
         choose_name = random.choice(human_names)
+        addChar = characters(
+                name = choose_name,
+                char_race = race
+                )
+        db.session.add(addChar)
+        db.session.commit()
     elif race == 'Gnome':
         choose_name = random.choice(gnome_names)
+        addChar = characters(
+                name = choose_name,
+                char_race = race
+                )
+        db.session.add(addChar)
+        db.session.commit()
     elif race == 'Satyr':
         choose_name = random.choice(satyr_names)
+        addChar = characters(
+                name = choose_name,
+                char_race = race
+                )
+        db.session.add(addChar)
+        db.session.commit()
     elif race == 'Half-Elf':
         choose_name = random.choice(half_elf_names)
+        addChar = characters(
+                name = choose_name,
+                char_race = race
+                )
+        db.session.add(addChar)
+        db.session.commit()
     elif race == "Dragonborn":
         choose_name = random.choice(dragonborn_names)
+        addChar = characters(
+                name = choose_name,
+                char_race = race
+                )
+        db.session.add(addChar)
+        db.session.commit()
     elif race == "Dwarf":
         choose_name = random.choice(dwarf_names)
+        addChar = characters(
+                name = choose_name,
+                char_race = race
+                )
+        db.session.add(addChar)
+        db.session.commit()
     elif race == "Halfling":
         choose_name = random.choice(halfling_names)
+        addChar = characters(
+                name = choose_name,
+                char_race = race
+                )
+        db.session.add(addChar)
+        db.session.commit()
     elif race == "Half-Orc":
         choose_name = random.choice(half_orc_names)
+        addChar = characters(
+                name = choose_name,
+                char_race = race
+                )
+        db.session.add(addChar)
+        db.session.commit()
     elif race == "Kenku":
         choose_name = random.choice(kenku_names)
+        addChar = characters(
+                name = choose_name,
+                char_race = race
+                )
+        db.session.add(addChar)
+        db.session.commit()
     
     return Response(choose_name, mimetype='text/plain')
 

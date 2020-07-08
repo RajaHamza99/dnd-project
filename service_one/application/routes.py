@@ -1,7 +1,6 @@
 from flask import render_template, request, url_for, Response, jsonify, json
-from application import app, db
+from application import app
 from application.forms import GenerateForm
-from application.models import character
 import random, requests, time
 
 

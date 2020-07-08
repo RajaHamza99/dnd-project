@@ -36,13 +36,14 @@ services:
                         - '5003:5003'
                 deploy:
                         replicas: 6
-        nginx:
-                image: nginx:latest
+        mysql:
+                image: rajahamza104/dnd-sql
+                build: ./db
+                environment:
+                        MYSQL_USER: ${DB_USERNAME}
+                        MYSQL_PASSWORD: ${DB_PASSWORD}
+                        MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+                        MYSQL_DATABASE: dnd-db
                 ports:
-                        - '80:80'
-                depends_on:
-                        - service_one
-                volumes:
-                        - type: bind
-                          source: ./nginx/nginx.conf
-                          target: /etc/nginx/nginx.conf
+                        - '3306:3306'
+                          
