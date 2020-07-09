@@ -3,7 +3,7 @@ pipeline{
         stages{
             stage('Install Docker using ansible'){
                 steps{
-                        sh "ansible-playbook -i inventory playbook.yaml"
+                        sh "ansible-playbook -i inventory Ansible/playbook.yaml"
                 }
             }
                 stage('Deploy application'){
