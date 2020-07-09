@@ -1,17 +1,15 @@
 --- 
-- name:
+- name: "Initialise swarm"
     docker_swarm:
     state: present
-  name: "Initialise swarm"
-- name:
+- name: "Get swarm info"
   docker_swarm_info:
     register: swarm_info
-  name: "Get swarm info"
-- name:
-  debug:
-    msg: "Swarm Info {{ swarm_info }}"
-- name:
+- debug:
+        msg: "Swarm info: {{ swarm_info }}"
+- name: "Get worker token"
   add_host:
     name: token
     value: "{{ swarm_info['swarm_facts']['JoinTokens']['Worker'] }}"
-  name: "Get worker token"
+
+
