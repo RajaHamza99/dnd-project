@@ -3,7 +3,7 @@ pipeline{
         stages{
             stage('Install Docker using ansible'){
                 steps{
-                        sh "install-jenkins.sh"
+                        sh "install-docker.sh"
                 }
             }
                 stage('Deploy application'){
