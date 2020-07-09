@@ -1,9 +1,9 @@
 pipeline{
         agent any
         stages{
-            stage('Install docker and docker-compose'){
+            stage('Install Docker using ansible'){
                 steps{
-                        sh "bash install-docker.sh"
+                        sh "ansible-playbook -i inventory playbook.yaml"
                 }
             }
                 stage('Deploy application'){
