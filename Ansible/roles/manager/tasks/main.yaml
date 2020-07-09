@@ -1,4 +1,4 @@
-- name: "Initialise swarm"
+- name: "Initialise the swarm"
   docker_swarm:
           state: present
 - name: "Get swarm info"
