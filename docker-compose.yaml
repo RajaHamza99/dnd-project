@@ -12,7 +12,7 @@ services:
                 environment:
                         - SECRET_KEY=${SECRET_KEY}
                 deploy:
-                        replicas: 12
+                        replicas: 8
 
         service_two:
                 image: rajahamza104/service_two
@@ -20,7 +20,7 @@ services:
                 ports:
                         - '5001:5001'
                 deploy:
-                        replicas: 12
+                        replicas: 8
 
         service_three:
                 image: rajahamza104/service_three
@@ -28,14 +28,14 @@ services:
                 ports:
                         - '5002:5002'
                 deploy:
-                        replicas: 12
+                        replicas: 8
         service_four:
                 image: rajahamza104/service_four
                 build: ./service_four
                 ports:
                         - '5003:5003'
                 deploy:
-                        replicas: 12
+                        replicas: 8
 
         mysql:
                 image: rajahamza104/dnd-sql
