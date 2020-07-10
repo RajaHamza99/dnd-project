@@ -1,4 +1,5 @@
 #! /bin/bash
+ssh jenkins@dnd-manager
 export SECRET_KEY=apogjmnaiopdgn
 export DB_USER=hamza
 export DB_PASS=hamza2
