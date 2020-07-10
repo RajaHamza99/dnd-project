@@ -9,6 +9,8 @@ services:
                         - service_two
                 environment:
                         - SECRET_KEY=${SECRET_KEY}
+                deploy:
+                        replicas: 6
 
         service_two:
                 image: rajahamza104/service_two
