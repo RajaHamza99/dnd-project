@@ -16,4 +16,15 @@ def home():
         get_race = requests.get('http://service_three:5002/race')
         character_race = get_race.text
         name = requests.post('http://service_four:5003/name', data=character_race)
-        return render_template('home.html', title='Class', form=form, classes=character_class, race=character_race, name=name)
+        character_name = name.text
+        stat = requests.post('http://service_four:5003/stats', data=character_race)
+        stat_dict = json.loads(stat.text)
+        data = characters(
+                name = character_name,
+                char_class = character_class,
+                char_race = character_race)
+        db.session.add(data)
+        db.session.commit()
+        stored_characters = characters.query.order_by(desc(characters.id)).limit(5).all()
+
+        return render_template('home.html', title='Class', form=form, classes=character_class, race=character_race, name=character_name, stats=stat_dict, all_characters=stored_characters)
