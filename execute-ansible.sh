@@ -1,3 +1,3 @@
 #! /bin/bash
 
-sudo su rajahamza104 -c "ansible-playbook -i inventory playbook.yaml"
+/home/jenkins/.local/bin/ansible-playbook -i inventory playbook.yaml
