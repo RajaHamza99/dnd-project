@@ -12,8 +12,6 @@ class TestBase(TestCase):
 class TestResponse(TestBase):
 
     def test_human(self):
-        with patch('requests.get') as g:
-            g.return_value.text = "Human"
-
-            response = self.client.get(url_for('home'))
-            self.assertIn(b'Human', response.data)
+    elf_names = [b"Wrandithas", b"Baljeon", b"Ianris", b"Zumpetor", b"Olowraek", b"Advalur", b"Trazeiros", b"Virkian", b"Qidan", b"Luwraek", b"Adleth", b"Krisrora", b"Bithyra", b"Gilharice", b"Grecyne", b"Inatris", b"Keyrel", b"Caicaryn", b"Greroris", b"Qixisys"]
+    response = self.client.post('/generatename', data='Human')
+    self.assertIn(response.data in human_names)
