@@ -1,2 +1,3 @@
 #! /bin/bash
-ansible-playbook -i inventory playbook.yaml
+
+sudo su rajahamza104 -c "ansible-playbook -i inventory playbook.yaml"
