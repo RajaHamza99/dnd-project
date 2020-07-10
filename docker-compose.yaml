@@ -14,7 +14,7 @@ services:
                         - DB_USER=${DB_USER}
                         - DB_PASS=${DB_PASS} 
                 deploy:
-                        replicas: 6
+                        replicas: 8
 
         service_two:
                 image: rajahamza104/my_service_two
@@ -22,7 +22,7 @@ services:
                 ports:
                         - '5001:5001'
                 deploy:
-                        replicas: 6
+                        replicas: 8
 
         service_three:
                 image: rajahamza104/my_service_three
@@ -30,14 +30,14 @@ services:
                 ports:
                         - '5002:5002'
                 deploy:
-                        replicas: 6
+                        replicas: 8
         service_four:
                 image: rajahamza104/my_service_four
                 build: ./service_four
                 ports:
                         - '5003:5003'
                 deploy:
-                        replicas: 6
+                        replicas: 8
         mysql:
                 image: rajahamza104/dnd-sql
                 build: ./db
