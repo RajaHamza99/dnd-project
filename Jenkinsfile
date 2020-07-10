@@ -3,7 +3,6 @@ pipeline{
         stages{
             stage('Install Docker using ansible'){
                 steps{
-                        sh "sudo su - jenkins && ansible --version"
                         sh "bash execute-ansible.sh"
                 }
             }
