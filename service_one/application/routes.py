@@ -1,5 +1,5 @@
 from flask import render_template, request, url_for, Response, jsonify, json
-from application import app, db
+from application import app
 from application.forms import GenerateForm, AddForm
 from sqlalchemy import desc
 import random, requests, time
