@@ -11,17 +11,5 @@
 	{% if race %}
 	<h1> Your character is a {{ race }} {{ classes }} </h1>
 	<h2> Your character name is {{ name }}</h2>
-	<h2> Your character stats are {{ stats.key }} </h2>
-	{% for key, value in stats.items() %}
-	<th>{{ key }}</th>
-	<td>{{ value }} </td>
-	<br>
-	{% endfor %}
-	{% for character in all_characters %}
-	<h3>{{ character.id }}</h3>
-	<h3> Your character name is {{ character.name}}</h3>
-	<h3> Your character class is {{character.char_class}}</h3>
-	<h3> Your character race is {{character.char_race}} </h3>
-	{% endfor %}
 	{% endif %}
 	{% endblock %}
