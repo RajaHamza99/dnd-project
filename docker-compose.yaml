@@ -32,11 +32,3 @@ services:
                         - '5003:5003'
                 deploy:
                         replicas: 4
-        nginx:
-                image: nginx:latest
-                ports:
-                        - '80:80'
-                volumes:
-                        - type: bind
-                          source: ./nginx/nginx.conf
-                          target: /etc/nginx/nginx.conf
