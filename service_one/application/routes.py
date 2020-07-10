@@ -13,9 +13,9 @@ def home():
     if request.method == 'GET':
         return render_template('home.html', title='Class', form=form)
     if form.validate_on_submit():
-        get_class = requests.get('http://service_two:5001/class2')
+        get_class = requests.get('http://service_two:5001/class')
         character_class = get_class.text
-        get_race = requests.get('http://service_three:5002/race2')
+        get_race = requests.get('http://service_three:5002/race')
         character_race = get_race.text
         name = requests.post('http://service_four:5003/name', data=character_race)
         character_name = name.text
