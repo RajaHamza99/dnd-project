@@ -1,4 +1,4 @@
-from flask import render_template, request, url_for, Response
+from flask import render_template, request, url_for, Response, jsonify, json
 from application import app
 from application.forms import GenerateForm, AddForm
 import random, requests, time
