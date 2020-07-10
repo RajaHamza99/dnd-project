@@ -18,7 +18,4 @@ def home():
         character_race = get_race.text
         name = requests.post('http://service_four:5003/name', data=character_race)
         character_name = name.text
-        stat = requests.post('http://service_four:5003/stats', data=character_race)
-        stat_dict = json.loads(stat.text)
-
         return render_template('home.html', title='Class', form=form, classes=character_class, race=character_race, name=character_name, stats=stat_dict)
