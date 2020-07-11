@@ -2,9 +2,8 @@ from flask import redirect, url_for, request, Response, jsonify
 from application import app
 import random, requests
 
-@app.route('/name', methods = ['GET', 'POST'])
+@app.route('/name', methods = ['POST'])
 def generatename():
-    choose_name = "this page will generate a name for you"
     race = request.data.decode('utf-8')
     
     elf_names = ["Wrandithas", "Baljeon", "Ianris", "Zumpetor", "Olowraek", "Advalur", "Trazeiros", "Virkian", "Qidan", "Luwraek", "Adleth", "Krisrora", "Bithyra", "Gilharice", "Grecyne", "Inatris", "Keyrel", "Caicaryn", "Greroris", "Qixisys"]
