@@ -2,12 +2,12 @@
 
 . /home/rajahamza104/dnd-project/venv/bin/activate
 
-echo pwd
+pwd
 cd /home/jenkins/.jenkins/workspace/dnd-app/service_one
-echo pwd
+pwd
 ls
-pytest ./service_one --cov ./service_one/
-echo pwd
+pytest --cov ./application
+pwd
 ls
 
 pytest ./service_two --cov ./service_two/
