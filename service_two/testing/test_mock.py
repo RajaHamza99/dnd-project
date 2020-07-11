@@ -9,6 +9,8 @@ class TestBase(TestCase):
         return app
 
 class TestResponse(TestBase):
+    def test_home_view(self):
+        self.assertEqual(self.client.get(url_for('generateclass')).status_code, 200)
 
     def test_generaterace(self):
         classes = [b"Barbarian", b"Fighter", b"Monk", b"Rogue", b"Blood Hunter"]
