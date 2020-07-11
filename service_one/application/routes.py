@@ -21,6 +21,7 @@ def home():
         character_name = name.text
         stat = requests.post('http://service_four:5003/stats', data=character_race)
         stat_dict = json.loads(stat.text)
+        app.logger.info(stat.text)
         data = characters(
                 name = character_name,
                 char_class = character_class,
