@@ -19,5 +19,5 @@ class TestResponse(TestBase):
         elf_names = ["Wrandithas", "Baljeon", "Ianris", "Zumpetor", "Olowraek", "Advalur", "Trazeiros", "Virkian", "Qidan", "Luwraek", "Adleth", "Krisrora", "Bithyra", "Gilharice", "Grecyne", "Inatris", "Keyrel", "Caicaryn", "Greroris", "Qixisys"]
         with patch('requests.post') as x:
             x.return_value.text = "Elf"
-            response = self.client.get(url_for('generatename'))
+            response = self.client.post(url_for('generatename'))
             self.assertIn(b"Wrandithas", response.data)
