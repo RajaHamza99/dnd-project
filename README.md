@@ -38,6 +38,10 @@ The second app will generate the same, but also stats for the user's character. 
 ## Asana Board
 In order to keep track of my project and it's progress, I used an Asana board. This board also marks the items needed for the Minimum Viable Product (MVP). This also includes completed user stories to allow me to see what I would like the user to be able to do at bare minimum.
 
+![Asana Board](https://imgur.com/eaIHDqz.jpg)
+
+https://app.asana.com/0/1181637805113345/board
+
 ## Database
 This application only requires a simple table to store information. The following table is used to store data:
 
