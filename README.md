@@ -41,8 +41,10 @@ In order to keep track of my project and it's progress, I used an Asana board. T
 ## Database
 This application only requires a simple table to store information. The following table is used to store data:
 
-## CI Pipeline
+## CI Pipeline  
 This first diagram is what I initially imagined the CI Pipeline to look like. 
+
+[First CI Pipeline](https://imgur.com/idxOBAh.png)
 
 This second diagram is what the finalised CI Pipeline looks like. It includes the use of Ansible to configure my machines and Nginx which works as both a reverse proxy and load balancer. 
 
