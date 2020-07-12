@@ -43,7 +43,9 @@ In order to keep track of my project and it's progress, I used an Asana board. T
 https://app.asana.com/0/1181637805113345/board
 
 ## Database
-This application only requires a simple table to store information. The following table is used to store data:
+This application only requires a simple table to store information. Data is saved even after the application is brought down and back up via the use of a volume. The following table is used to store data:
+
+![DATA](https://imgur.com/HucMfnU.jpg)
 
 ## CI Pipeline  
 This first diagram is what I initially imagined the CI Pipeline to look like. 
