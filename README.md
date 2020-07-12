@@ -29,7 +29,7 @@ The requirements of the project are as follows:
 </ul>
   
 ## App Overview
-I created a Dnd Character Generation app. As part of having two implementations, the first one is simpler than the first.  
+I created a DnD Character Generation app. As part of having two implementations, the first one is simpler than the first.  
 
 The first app will generate a random class, race and name for the user. 
 
