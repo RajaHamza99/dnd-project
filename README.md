@@ -101,6 +101,18 @@ Here you can see the coverage of my tests for each service.
 
 ![1.1](https://imgur.com/Ef0pwze.jpg)
 
+### App 1 Service 2
+
+![1.2](https://imgur.com/nmywWRp.jpg)
+
+### App 1 Service 3
+
+![1.3](https://imgur.com/tNjVRv7.jpg)
+
+### App 1 Service 4
+
+![1.4](https://imgur.com/wvn63Gs.jpg)
+
 ## Risk Assessment
 I also carried out a risk assessment identifying the potential risks for this project and any mitigation in place. 
 
