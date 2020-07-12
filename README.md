@@ -44,7 +44,7 @@ This application only requires a simple table to store information. The followin
 ## CI Pipeline  
 This first diagram is what I initially imagined the CI Pipeline to look like. 
 
-![First CI Pipeline](https://imgur.com/idxOBAh.jpg)
+![First CI Pipeline](https://imgur.com/GKH1nr8.jpg)
 
 This second diagram is what the finalised CI Pipeline looks like. It includes the use of Ansible to configure my machines and Nginx which works as both a reverse proxy and load balancer. 
 
