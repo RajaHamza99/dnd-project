@@ -81,6 +81,9 @@ Finally, Jenkins will deploy the application from the swarm manager machine usin
 
 ![Successful Pipeline](https://imgur.com/F0sE4BR.jpg)
 
+
+A failed Pipeline Job will be displayed as such: 
+
 ![Failed Pipeline](https://imgur.com/SdeAent.jpg)
 
 ## Testing
