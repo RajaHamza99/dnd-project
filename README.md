@@ -51,17 +51,25 @@ This second diagram is what the finalised CI Pipeline looks like. It includes th
 ![Final CI Pipeline](https://imgur.com/vaaHpLQ.jpg)
 
 ##  App Design #1
+
+![App 1 Home](https://imgur.com/OKZX2pi.jpg)
+
 The first app just displays a title and generate button. After clicking the generate button, a race, class, and name is displayed to the page. The options for the races and classes are only some of those available in DnD, and the second implementation covers other ones.
 
+![App 2 Generated](https://imgur.com/llVDd5Q.jpg)
 
 ## App Design #2
 The second implementation is a bit more complex. The page that is displayed to the user is changed, as you can see the text is red.  
+
+![App 2 home page](https://imgur.com/XgmDfkd.jpg)
 
 As I mentioned earlier, the options for class and race are now different compared to the first one.  
 
 As a result, the names generated are different as the name depends on the race passed to it. 
 
 As well as generating different versions of the first app, it also randomly generates stats for the user. It then adds a bonus to their stats depending on their race, as DnD has racial bonuses for stats.  
+
+![App 2 Generated](https://imgur.com/fwXzVKk.jpg)
 
 ## Deployment
 The deployment of the app is automated and handled different tools such as Jenkins, Ansible and Docker. After making a commit to my GitHub, Jenkins will trigger a pipeline job via webhook. The different stages of the pipeline are outlined in my Jenkinsfile. In order to improve readability, each step refers to a script which handles a different stage of the pipeline. First, Jenkins will checkout the Github repo. It will then run all my unit tests, and if they pass it will move on to the next stage.  
