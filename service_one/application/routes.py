@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 from flask import render_template, request, url_for
->>>>>>> 770df3623562f1332b318f91ee364e7bba291e34
 from application import app
 from application.forms import GenerateForm, AddForm
 from sqlalchemy import desc
