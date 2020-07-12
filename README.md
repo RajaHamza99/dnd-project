@@ -94,6 +94,8 @@ Here you can see the coverage of my tests for each service.
 ## Risk Assessment
 I also carried out a risk assessment identifying the potential risks for this project and any mitigation in place. 
 
+![Risk Assessment](https://imgur.com/6Ge9Dhe.jpg)
+
 ## Current Issues
 There are currently a few issues with the deployment of the application. These are as follows:  
 
