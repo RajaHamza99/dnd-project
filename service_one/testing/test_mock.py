@@ -41,7 +41,7 @@ class TestBase(TestCase):
 class TestResponse(TestBase):
     def test_homeview(self):
         response = self.client.get(url_for('home'), data="")
-        self.assertIn(b"DnD Character Generator test", response.data)
+        self.assertIn(b"DnD Character Generator", response.data)
     
     
     def test_home(self):
