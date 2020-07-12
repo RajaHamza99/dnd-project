@@ -48,6 +48,8 @@ This first diagram is what I initially imagined the CI Pipeline to look like.
 
 This second diagram is what the finalised CI Pipeline looks like. It includes the use of Ansible to configure my machines and Nginx which works as both a reverse proxy and load balancer. 
 
+![Final CI Pipeline](https://imgur.com/Vnw03Ea.jpg)
+
 ##  App Design #1
 The first app just displays a title and generate button. After clicking the generate button, a race, class, and name is displayed to the page. The options for the races and classes are only some of those available in DnD, and the second implementation covers other ones.
 
