@@ -72,11 +72,16 @@ As well as generating different versions of the first app, it also randomly gene
 ![App 2 Generated](https://imgur.com/fwXzVKk.jpg)
 
 ## Deployment
+
 The deployment of the app is automated and handled different tools such as Jenkins, Ansible and Docker. After making a commit to my GitHub, Jenkins will trigger a pipeline job via webhook. The different stages of the pipeline are outlined in my Jenkinsfile. In order to improve readability, each step refers to a script which handles a different stage of the pipeline. First, Jenkins will checkout the Github repo. It will then run all my unit tests, and if they pass it will move on to the next stage.  
 
 Here, Jenkins will configure my machines with the use of Ansible. My Ansible playbook specifies different roles which allow me to install different requirements depending on what each machine will be responsible for. For every machine, Ansible will install Docker. It will then configure my swarm - creating a swarm on my swarm manager, and joining that swarm on my two worker machines.  
 
 Finally, Jenkins will deploy the application from the swarm manager machine using docker stack. This will balance the load of the containers across the three different machines.
+
+![Successful Pipeline](https://imgur.com/F0sE4BR.jpg)
+
+![Failed Pipeline](https://imgur.com/SdeAent.jpg)
 
 ## Testing
 As part of the project requirement, I also carried out unit testing on both implementations of my application.  
