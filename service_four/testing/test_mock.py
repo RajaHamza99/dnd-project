@@ -30,9 +30,14 @@ class TestResponse(TestBase):
     
     
     def test_generatename(self):
-        elf_names = ["Wrandithas", "Baljeon", "Ianris", "Zumpetor", "Olowraek", "Advalur", "Trazeiros", "Virkian", "Qidan", "Luwraek", "Adleth", "Krisrora", "Bithyra", "Gilharice", "Grecyne", "Inatris", "Keyrel", "Caicaryn", "Greroris", "Qixisys"]
+        elf_names = [b"Wrandithas", b"Baljeon", b"Ianris", b"Zumpetor", b"Olowraek", b"Advalur", b"Trazeiros", b"Virkian", b"Qidan", b"Luwraek", b"Adleth", b"Krisrora", b"Bithyra", b"Gilharice", b"Grecyne", b"Inatris", b"Keyrel", b"Caicaryn", b"Greroris", b"Qixisys"]
        
-        with requests_mock.mock() as x:
-            x.post("http://service_four:5003/generatename", text="Elf")
-            response = self.client.post(url_for('generatename'))
-            self.assertIn(b"Wrandithas", response.data)
+        response = self.client.post(url_for('generatename'), data="Elf")
+        self.assertTrue(response.data in elf_names)
+
+
+    def test_generatestats(self):
+        stats = {"strength": 10, "dexterity": 10, "constitution": 10, "intelligence": 10, "wisdom": 10, "charisma": 10}
+
+        response = self.client.post(url_for('generatestats'), data="Elf")
+        self.assertIn()
