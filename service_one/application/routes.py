@@ -1,4 +1,4 @@
-from flask import render_template, request, url_for, Response, jsonify, json
+from flask import render_template, request, url_for
 from application import app
 from application.forms import GenerateForm, AddForm
 from sqlalchemy import desc
