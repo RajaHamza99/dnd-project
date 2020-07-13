@@ -142,6 +142,7 @@ There are currently a few issues with the deployment of the application. These a
 <ul>
   <li>Nginx isn't configured with Ansible</li>
   <li>Sometimes there can be some downtime when deploying the second implementation as containers are being switched out.</li>
+  <li>Machines run out of space</li>
 </ul>
 
 ## Future Improvements
