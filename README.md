@@ -35,6 +35,10 @@ The first app will generate a random class, race and name for the user.
 
 The second app will generate the same, but also stats for the user's character. The second app also commits the character's class, race and name to a database which persists even after the containers are brought down through the use of a volume.  
 
+
+
+![Services relationship]([Imgur](https://imgur.com/2GGDOg8.jpg)
+
 ## Asana Board
 In order to keep track of my project and it's progress, I used an Asana board. This board also marks the items needed for the Minimum Viable Product (MVP). This also includes completed user stories to allow me to see what I would like the user to be able to do at bare minimum.
 
