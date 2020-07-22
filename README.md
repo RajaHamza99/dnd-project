@@ -37,7 +37,7 @@ The second app will generate the same, but also stats for the user's character. 
 
 
 
-![Services relationship]([Imgur](https://imgur.com/2GGDOg8.jpg)
+![Services relationship](https://imgur.com/2GGDOg8.jpg)
 
 ## Asana Board
 In order to keep track of my project and it's progress, I used an Asana board. This board also marks the items needed for the Minimum Viable Product (MVP). This also includes completed user stories to allow me to see what I would like the user to be able to do at bare minimum.
